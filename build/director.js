@@ -1,7 +1,7 @@
 
 
 //
-// Generated on Sat Jan 19 2013 12:34:55 GMT-0800 (PST) by Nodejitsu, Inc (Using Codesurgeon).
+// Generated on Sat Jan 19 2013 13:04:34 GMT-0800 (PST) by Nodejitsu, Inc (Using Codesurgeon).
 // Version 1.1.10
 //
 
@@ -222,7 +222,7 @@ Router.prototype.init = function (r) {
       }
     }
     else {
-      // User canonical url
+      // Use canonical url
       var routeTo = this.getPath()
     }
 
@@ -413,7 +413,7 @@ Router.prototype.configure = function(options) {
   this.resource = options.resource;
   this.history = options.html5history && this.historySupport || false;
   this.run_in_init = this.history === true && options.run_handler_in_init !== false;
-  this.convert_hash_in_init = options.convert_hash_in_init !== false;
+  this.convert_hash_in_init = this.history === true && options.convert_hash_in_init !== false;
   this.every = {
     after: options.after || null,
     before: options.before || null,

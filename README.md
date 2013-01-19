@@ -379,6 +379,7 @@ The `options` are:
 * **after:** A function (or list of functions) to call when a given route is no longer the active route.
 * **html5history:** If set to `true` and client supports `pushState()`, then uses HTML5 History API instead of hash fragments. See [History API](#history-api) for more information.
 * **run_handler_in_init:** If `html5history` is enabled, the route handler by default is executed upon `Router.init()` since with real URIs the router can not know if it should call a route handler or not. Setting this to `false` disables the route handler initial execution.
+* **convert_hash_in_init:** If `html5history` is enabled, the window.location hash by default is converted to a route upon `Router.init()` since with canonical URIs the router can not know if it should convert the hash to a route or not. Setting this to `false` disables the hash conversion on router initialisation.
 
 <a name="url-matching"></a>
 ## URL Matching
